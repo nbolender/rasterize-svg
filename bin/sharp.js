@@ -7,6 +7,7 @@ const sharp = require('sharp');
     const format = arguments[1];
 
     const result = await sharp(svgFilePath)
+        .resize(2048)
         .toFormat(format)
         .toBuffer()
 
